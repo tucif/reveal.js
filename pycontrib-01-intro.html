@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Contribuyendo a Python</title>
+
+		<meta name="description" content="Cómo contribuir a un proyecto de software libre como Python">
+		<meta name="author" content="David Suárez Pascal">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		 <style type="text/css">
+		   ol.start { 
+		       counter-reset: micontador;
+		   }
+		   ol.start > li, ol.continue > li {
+		       list-style: none;
+		   }
+		   ol.start > li:before, ol.continue > li:before {
+		       content: counter(micontador) ". "; 
+		       counter-increment: micontador;
+		   }
+		 </style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+				  <h1><small>Contribuyendo a Python</small></h1>
+				  <h3>Engorda a la víbora</h3>
+				  <p>
+				    <small>Rafael Santos y David Suárez Pascal</small><br>
+				    <a href="https://ccoss.org/"><img src="img/ccoss/ccoss_logo.png" /></a>
+				  </p>
+				</section>
+
+				<section>
+				  <h2>Plan de vuelo para el taller</h2>
+
+				  <ol style="font-size:85%;" start="0">
+				    <li>Sobre nosotros</li>
+				    <li>Introducción</li>
+				    <li>Herramientas y metodología para contribuir a Python:
+				      <ul>
+					<li>Git
+					<li>BPO: bugs.python.org
+					<li>Listas de correo
+					<li>Documentación para contribuidores a Python
+				      </ul>
+				    </li>
+				  </ol>
+				</section>
+
+				<section>
+				  <h2>Plan de vuelo para el taller</h2>
+
+				  <ol style="font-size:85%;" start="3">
+				    <li>Ámbitos de contribución:
+				      <ul>
+					<li>Reporte de bugs
+					<li>Triaje: Revisa, comenta y comprueba los reportes
+					<li>Documentación: completa, corrige y traduce los documentos de Python
+					<li>Evangelización: ¿qué más podemos hacer para favorecer la adopción de Python?
+					<li>Conviértete en un core developer de Python
+				      </ul>
+				    </li>
+				  </ol>
+				</section>
+
+				<section>
+				  <h2>Plan de vuelo para el taller</h2>
+
+				  <ol style="font-size:85%;" start="4">
+				    <li>Manos a la obra:
+				      <ol>
+					<li>Encuentra un bug susceptible de ser exterminado
+					<li>Crea una rama para atacar el problema
+					<li>Implementa y documenta tu solución
+					<li>Haz un <em>pull request</em>
+					<li>Ajusta tu solución de acuerdo a la retroalimentación
+					<li>Repite desde el paso 3
+				      </ol>
+				    </li>
+				  </ol>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
