@@ -64,20 +64,126 @@
 				</section>
 
 				<section>
-				  <h2>Plan de vuelo para el taller</h2>
+				  <h3>Plan de vuelo para el taller</h3>
 
-				  <ol style="font-size:85%;" start="0">
-				    <li>Sobre nosotros</li>
+				  <ul style="font-size:85%;" start="0">
 				    <li>Introducción</li>
-				    <li>Herramientas y metodología para contribuir a Python:
-				      <ul>
-					<li>Git
-					<li>BPO: bugs.python.org
-					<li>Listas de correo
-					<li>Documentación para contribuidores a Python
-				      </ul>
-				    </li>
-				  </ol>
+				    <li>Herramientas y metodología para <br/>contribuir código a Python</li>
+                                    <hr title="Break"/>
+				    <li>Maneras alternativas de contribuir</li>
+				    <li>Ejercicios de familiarización con CPython</li>
+                                    <br/>
+                                    <li>Lunch</li>
+                                    <br/>
+				    <li>Ejercicios de familiarización con CPython</li>
+                                    <hr title="Break"/>
+				    <li>Espacio abierto de contribución</li>
+				  </ul>
+				</section>
+                                <section>
+                                  <h5>Introducción</h5>
+                                  <h3>Sobre nosotros</h3>
+                                  <p>
+				    <img src="img/ccoss/David.png" />
+				    <img src="img/ccoss/Rafael.png" />
+                                  </p>
+				</section>
+                                <section>
+                                  <h5>Introducción</h5>
+                                  <h3>Comunidad</h3>
+                                  <p><a href="https://www.python.org/community/">python.org/community</a></p>
+                                  <ul>
+                                   <li> PSF</li>
+                                   <ul><li><i> Promover, proteger e impulsar Python</i></li></ul>
+                                   <li> Grupos</li>
+                                   <ul><li>Grupos de Usuarios Locales, SIG</li></ul>
+                                   <li> Listas de correo</li>
+                                   <li>Py<i>Slack</i>ers, Freenode IRC</li>
+                                  </ul>
+				</section>
+                                <section>
+                                  <h5>Introducción</h5>
+                                  <h3>Comunidad</h3>
+                                  <ul>
+                                   <li> Eventos</li>
+                                     <ul>
+                                     <li>PyCon US</li>
+                                     <li>PyCon LATAM, SciPy LATAM</li>
+                                     <li>DjangoCon, EuroPython, PyData, Pycon .*</li>
+                                    </ul>
+                                  </ul>
+				</section>
+                                <section>
+                                  <h5>Introducción</h5>
+                                  <h2>Python vs CPython</h2>
+				</section>
+
+                                <section>
+                                  <h5>Introducción</h5>
+                                  <h2>Punto de partida</h2>
+                                  <a href="https://devguide.python.org">devguide.python.org</a>
+				</section>
+
+				<section>
+                                  <h5>Introducción</h5>
+                                  <h3>Familiarízate con git</h3>
+                                  <p><a href="https://devguide.python.org/gitbootcamp/">devguide.python.org/gitbootcamp</a></p>
+                                  <ol style="font-size:85%;"> 
+                                    <li>Haz un <i>fork</i> del repositorio oficial de <a href="https://github.com/python/cpython">python/CPython</a> con tu cuenta de <i>Github</i> </li>
+                                    <li>Clona tu nuevo repositorio</li>
+                                  </ol>
+                                  <pre>
+                                  <code>
+       git clone git@github.com:&lt;usuario&gt;/cpython.git
+                                  </code>
+                                  </pre>
+				</section>
+
+				<section>
+                                  <h5>Introducción</h5>
+                                  <h3>Familiarízate con git</h3>
+                                  <p><a href="https://devguide.python.org/gitbootcamp/">devguide.python.org/gitbootcamp</a></p>
+                                  <ol style="font-size:85%;" start="3"> 
+                                    <li>Agrega el repositorio oficial como upstream</li>
+                                  </ol>
+                                  <pre>
+                                  <code>
+   git remote add upstream git@github.com:python/cpython.git
+                                  </code>
+                                  </pre>
+				</section>
+
+				<section>
+                                  <h5>Introducción</h5>
+                                  <h3>Familiarízate con git</h3>
+                                  <p><a href="https://devguide.python.org/gitbootcamp/">devguide.python.org/gitbootcamp</a></p>
+                                  <ol style="font-size:85%;" start="3"> 
+                                    <li>Asegúrate de que la configuración global de git incluye tus datos correctos</li>
+                                  </ol>
+                                  <pre>
+                                  <code>
+git config --global user.name "Tu Nombre"
+git config --global user.email &lt;usuario&gt;@users.noreply.github.com
+                                  </code>
+                                  </pre>
+                                </section>
+				<section>
+                                  <h5>Introducción</h5>
+                                  <h3>Familiarízate con git</h3>
+                                  <p><a href="https://devguide.python.org/gitbootcamp/">devguide.python.org/gitbootcamp</a></p>
+                                  <ol style="font-size:85%;" start="3"> 
+                                    <li>Crea un <i>branch</i> a partir del <i>master branch</i></li>
+                                  </ol>
+                                  <pre>
+                                  <code>
+          git checkout -b &lt;nombre&gt; master
+                                  </code>
+                                  </pre>
+                                </section>
+                                <section>
+                                  <h5>Introducción</h5>
+                                  <h2>Issue Tracker (BPO)</h2>
+                                  <a href="https://bugs.python.org">Bugs.Python.Org</a>
 				</section>
 
 				<section>
