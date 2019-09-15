@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Contribuyendo a Python</title>
+
+		<meta name="description" content="Cómo contribuir a un proyecto de software libre como Python">
+		<meta name="author" content="David Suárez Pascal">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		 <style type="text/css">
+		   ol.start { 
+		       counter-reset: micontador;
+		   }
+		   ol.start > li, ol.continue > li {
+		       list-style: none;
+		   }
+		   ol.start > li:before, ol.continue > li:before {
+		       content: counter(micontador) ". "; 
+		       counter-increment: micontador;
+		   }
+		 </style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+				  <h1><small>Rutas de contribución a Python</small></h1>
+				  <h3>Choose your path!</h3>
+				  <p>
+				    <small>Rafael Santos y David Suárez Pascal</small><br>
+				    <a href="https://ccoss.org/"><img src="img/ccoss/ccoss_logo.png" /></a>
+				  </p>
+				</section>
+
+				<section>
+				  <h2>¿En qué puedo contribuir a Python?</h2>
+
+				  <ul>
+				    <li>Reporte de bugs
+				    <li>Triaje: Revisa, comenta y comprueba los reportes
+				    <li>Documentación: completa, corrige y traduce los documentos de Python
+				    <li>Evangelización: ¿qué más podemos hacer para favorecer la adopción de Python?
+				    <li>Conviértete en un core developer de Python
+				  </ul>
+				</section>
+
+				<section>
+				  <h2>Buscando bugs</h2>
+
+				  <ul>
+				    <li>Encuentra alguno
+				    <li>Corre las pruebas de Python:
+				      <pre>
+					<code>
+./python -m test -j2 -rW
+
+./python -m test -h
+					</code>
+				      </pre>
+				    </li>
+				    <li>Si tienes "suerte", verifica el módulo que arroja el error y busca a ver si nadie lo ha reportado en bpo.
+				  </ul>
+				</section>
+
+				<section>
+				  <h2>Un poco de entomología</h2>
+
+				  <ul>
+				    <li>Si no tienes "suerte", siempre puedes checar la lista de bugs reportados en bpo:
+				      <ul>
+					<li><a href="https://bugs.python.org/issue?status=1&@sort=-activity&@columns=id%2Cactivity%2Ctitle%2Ccreator%2Cstatus&@dispname=Easy%20issues&@startwith=0&@group=priority&keywords=6&@action=search&@filter=&@pagesize=50">"Easy" issues</a>
+					<li><a href="https://bugs.python.org/issue?status=1&@sort=-activity&@columns=id%2Cactivity%2Ctitle%2Ccreator%2Cstatus&@dispname=Issues%20with%20patch&@startwith=0&@group=priority&keywords=2&@action=search&@filter=&@pagesize=50">Issues with patch</a>
+					<li><a href="https://bugs.python.org/issue?%40search_text=&ignore=file%3Acontent&title=&%40columns=title&id=&%40columns=id&stage=&creation=&creator=&activity=&%40columns=activity&%40sort=activity&actor=&nosy=&type=&components=&versions=&dependencies=&assignee=&keywords=22&priority=&status=1&%40columns=status&resolution=&nosy_count=&message_count=&%40group=&%40pagesize=50&%40startwith=0&%40sortdir=on&%40queryname=&%40old-queryname=&%40action=search">Newcomer friendly</a>
+				  </ul>
+				</section>
+
+				<section>
+				  <h2>¿En qué consiste el triaje (triage)?</h2>
+
+				  <h4>Manejo de <em>issues</em> y <em>pull requests (PR)</em></h4>
+				    <ul style="font-size:85%;">
+				      <li>Renombrar PRs
+				      <li>Revisar PRs
+				      <li>Ayudar a los contribuidores
+				      <li>Notificar a los <em>core developers</em>
+				      <li>Etiquetar apropiadamente: <em>DO-NOT-MERGE, expert-asyncio, invalid, needs backport to X.Y, OS-X, skip issue, skip news, sprint, stale, type-bugfix, type-documentation, type-enhancement, type-performance, type-security, type-tests</em>.
+				    </ul>
+				</section>
+
+				<section>
+				  <h2>¿Cómo ayudar a documentar Python?</h2>
+
+				  <h3>Para empezar</h3>
+
+				  <ul>
+				    <li>Python es famoso por su énfasis en la legibilidad y en la documentación del código: indentación, <em>docstrings</em>, tutorial, biblioteca estandar, guía del desarrollador.
+				    <li><a href="https://bugs.python.org/issue?%40search_text=&ignore=file%3Acontent&title=&%40columns=title&id=&%40columns=id&stage=&creation=&creator=&activity=&%40columns=activity&%40sort=activity&actor=&nosy=&type=&components=4&versions=&dependencies=&assignee=&keywords=6&priority=&status=1&%40columns=status&resolution=&nosy_count=&message_count=&%40group=&%40pagesize=100&%40startwith=0&%40sortdir=on&%40queryname=&%40old-queryname=&%40action=search">Issues relacionados con la documentación</a>
+				</section>
+
+				<section>
+				  <h2>Documentación de Python</h2>
+
+				  <ol>
+				    <li>Documentación para usuarios del lenguaje: tutorial, biblioteca estándar
+				      <ul>
+					<li>Incluida con el código fuente de CPython.
+				      </ul>
+				    </li>
+				    <li>Documentación para desarrolladores:
+				  </ol>
+				</section>
+
+				<section>
+				  <h2>Traduciendo la documentación</h2>
+
+				  <h4>PEP 545</h4>
+
+				  <ul style="font-size: 80%;">
+				    <li>Cada traducción tiene una etiqueta apropiada para cada idioma (ISO 639-1): <em>es, pt-br, fr, de</em>.
+				    <li>Distribuidas bajo CC0
+				    <li>Albergados en: https://github.com/python/python-docs-{LANGUAGE_TAG}
+				    <li>Una traducción completa incluye: tutorial/, library/stdtypes y library/functions
+				    <li>Está disponible en https://docs.python.org/{LANGUAGE_TAG}/{VERSION_TAG}/
+				  </ul>
+				</section>
+
+				<section data-background="#AA2222">
+				  <h2>Traduciendo la documentación</h2>
+
+				  <p>¡<a href="https://docs.python.org/es/3.7/">https://docs.python.org/es/3.7/</a> genera un error HTTP 404!</p>
+				</section>
+
+				<section data-background="#22AA22">
+				  <h2>Traducción al español</h2>
+
+				  <p><a href="https://github.com/raulcd/python-docs.es/">https://github.com/raulcd/python-docs.es/</a></p>
+				</section>
+
+				<section>
+				  <h2>Evangelizando con Python</h2>
+
+				  <ol>
+				    <li>Ayuda resolviendo las dudas de los principiantes: python-es@mail.python.org
+				    <li>Comparte tu conocimiento en Meetups, Python Days, Pycons, etc.
+				    <li>No participes en flame wars sobre lenguajes
+				    <li>Enfócate en las fortalezas del lenguaje: consistencia, legibilidad, documentación, potencia, ...
+				  </ol>
+				</section>
+
+				<section>
+				  <h2>El camino del core developer</h2>
+
+				  <ol>
+				    <li>Desarrollador de Python/Usuario de CPython
+				    <li>Contribuidor
+				    <li>Triage
+				    <li>Core developer
+				  </ol>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
