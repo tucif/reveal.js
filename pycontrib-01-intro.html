@@ -56,9 +56,8 @@
 			<div class="slides">
 				<section>
 				  <h1><small>Contribuyendo a Python</small></h1>
-				  <h3>Engorda a la víbora</h3>
 				  <p>
-				    <small>Rafael Santos y David Suárez Pascal</small><br>
+				    <small>Rafael Santos Pérez y David Suárez Pascal</small><br>
 				    <a href="https://ccoss.org/"><img src="img/ccoss/ccoss_logo.png" /></a>
 				  </p>
 				</section>
@@ -66,16 +65,14 @@
 				<section>
 				  <h3>Plan de vuelo para el taller</h3>
 
-				  <ul style="font-size:85%;" start="0">
+				  <ul style="font-size:85%;text-align:center" start="0">
 				    <li>Introducción</li>
-				    <li>Herramientas y metodología para <br/>contribuir código a Python</li>
+				    <li>Preparándonos para contribuir código a Python</li>
                                     <hr title="Break"/>
-				    <li>Maneras alternativas de contribuir</li>
-				    <li>Ejercicios de familiarización con CPython</li>
-                                    <br/>
-                                    <li>Lunch</li>
-                                    <br/>
-				    <li>Ejercicios de familiarización con CPython</li>
+				    <li>Más allá del código: Todas las maneras de contribuir</li>
+				    <li>Retos de familiarización con CPython</li>
+                                    <p style="text-align:center">Lunch</p>
+				    <li>Retos de familiarización con CPython</li>
                                     <hr title="Break"/>
 				    <li>Espacio abierto de contribución</li>
 				  </ul>
@@ -172,11 +169,123 @@ git config --global user.email &lt;usuario&gt;@users.noreply.github.com
                                   <h3>Familiarízate con git</h3>
                                   <p><a href="https://devguide.python.org/gitbootcamp/">devguide.python.org/gitbootcamp</a></p>
                                   <ol style="font-size:85%;" start="3"> 
-                                    <li>Crea un <i>branch</i> a partir del <i>master branch</i></li>
+                                    <li>Crea y activa un <i>branch</i> a partir del <i>master branch</i></li>
                                   </ol>
                                   <pre>
                                   <code>
           git checkout -b &lt;nombre&gt; master
+                                  </code>
+                                  </pre>
+                                </section>
+
+				<section>
+                                  <h5>Introducción</h5>
+                                  <h4>Prepára el proyecto para desarrollo</h4>
+                                  <p style="font-size:55%;"><a href="https://devguide.python.org/setup/#compile-and-build">devguide.python.org/setup/#compile-and-build</a></p>
+                                  <ul style="font-size:85%;"> 
+                                    <li>Configura y Compila con <i>debug symbols</i></li>
+                                  </ul>
+                                  <pre>
+                                  <code>
+          ./configure --with-pydebug
+
+          make -s -j2
+                                  </code>
+                                  </pre>
+                                </section>
+
+				<section>
+                                  <h5>Introducción</h5>
+                                  <h3>¡Listo!</h3>
+                                  ¡Ya estás corriendo Python 3.9!
+                                  <p style="font-size:55%;">Bienvenid@ al futuro</p>
+                                  <pre>
+                                  <code>
+$ ./python.exe 
+Python 3.9.0a0 (heads/ccoss2019-dirty:3f43cef, Sep 10 2019, 19:33:56) 
+[Clang 6.0 (clang-600.0.54)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt;
+                                  
+                                  </code>
+                                  </pre>
+                                </section>
+
+                                <section>
+                                  <h5>Primer Reto</h5>
+                                  <h3>Agrega tu propio mensaje en el encabezado del intérprete</h3>
+                                  <pre>
+                                  <code>
+$ ./python.exe 
+Python 3.9.0a0 (heads/ccoss2019-dirty:3f43cef, Sep 10 2019, 19:33:56) 
+[Clang 6.0 (clang-600.0.54)] on darwin
+[CCOSS 2019 - Python Contributor Workshop] &lt;==
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; 
+
+                                  </code>
+                                  </pre>
+				</section>
+
+                                <section>
+                                  <h5>Primer Reto</h5>
+                                  <h4>Pasos a seguir:</h4>
+                                  <ol>
+                                  <li>Encuentra la función principal del intérprete de CPython </li>
+                                  <li>Encuentra la función que imprime el encabezado </li>
+                                  <li>Modifica el mensaje </li>
+                                  <li>Recompila el proyecto </li>
+                                  </ol>
+                                  <pre>
+                                  <code>
+          make -s -j2
+                                  </code>
+                                  </pre>
+				</section>
+
+                                <section>
+                                  <h5>Segundo Reto</h5>
+                                  <h3>Modifica el Zen de Python</h3>
+                                  <pre>
+                                  <code>
+&gt;&gt;&gt; import this
+The Zen of Python, by Tim Peters and Rafael Santos
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+CCOSS Python Contributor Workshop!
+                                  </code>
+                                  </pre>
+				</section>
+
+                                <section>
+                                  <h5>Segundo Reto</h5>
+                                  <h4>Pasos a seguir:</h4>
+                                  <ol>
+                                  <li>Identifica el módulo de la librería estándar que implementa el Zen</li>
+                                  <li>Identifica el método de cifrado utilizado por el módulo</li>
+                                  <li>Modifica el texto o agrega código para incluir los cambios</li>
+                                  </ol>
+                                  <pre>
+                                  <code>
+         Hint: from codecs import encode 
                                   </code>
                                   </pre>
                                 </section>
