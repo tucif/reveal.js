@@ -33,19 +33,6 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
-
-		 <style type="text/css">
-		   ol.start { 
-		       counter-reset: micontador;
-		   }
-		   ol.start > li, ol.continue > li {
-		       list-style: none;
-		   }
-		   ol.start > li:before, ol.continue > li:before {
-		       content: counter(micontador) ". "; 
-		       counter-increment: micontador;
-		   }
-		 </style>
 	</head>
 
 	<body>
@@ -56,6 +43,7 @@
 			<div class="slides">
 				<section>
 				  <h1><small>Contribuyendo a Python</small></h1>
+				  <h3>Alimenta a la víbora</h3>
 				  <p>
 				    <small>Rafael Santos Pérez y David Suárez Pascal</small><br>
 				    <a href="https://ccoss.org/"><img src="img/ccoss/ccoss_logo.png" /></a>
@@ -90,19 +78,19 @@
                                   <h3>Comunidad</h3>
                                   <p><a href="https://www.python.org/community/">python.org/community</a></p>
                                   <ul>
-                                   <li> PSF</li>
-                                   <ul><li><i> Promover, proteger e impulsar Python</i></li></ul>
-                                   <li> Grupos</li>
+                                   <li>PSF</li>
+                                   <ul><li><em>Promover, proteger e impulsar Python</em></li></ul>
+                                   <li>Grupos</li>
                                    <ul><li>Grupos de Usuarios Locales, SIG</li></ul>
-                                   <li> Listas de correo</li>
-                                   <li>Py<i>Slack</i>ers, Freenode IRC</li>
+                                   <li>Listas de correo</li>
+                                   <li>Py<em>Slack</em>ers, Freenode IRC</li>
                                   </ul>
 				</section>
                                 <section>
                                   <h5>Introducción</h5>
                                   <h3>Comunidad</h3>
                                   <ul>
-                                   <li> Eventos</li>
+                                   <li>Eventos</li>
                                      <ul>
                                      <li>PyCon US</li>
                                      <li>PyCon LATAM, SciPy LATAM</li>
@@ -125,8 +113,8 @@
                                   <h5>Introducción</h5>
                                   <h3>Familiarízate con git</h3>
                                   <p><a href="https://devguide.python.org/gitbootcamp/">devguide.python.org/gitbootcamp</a></p>
-                                  <ol style="font-size:85%;"> 
-                                    <li>Haz un <i>fork</i> del repositorio oficial de <a href="https://github.com/python/cpython">python/CPython</a> con tu cuenta de <i>Github</i> </li>
+                                  <ol style="font-size:85%;">
+                                    <li>Haz un <em>fork</em> del repositorio oficial de <a href="https://github.com/python/cpython">python/CPython</a> con tu cuenta de <em>Github</em></li>
                                     <li>Clona tu nuevo repositorio</li>
                                   </ol>
                                   <pre>
@@ -140,7 +128,7 @@
                                   <h5>Introducción</h5>
                                   <h3>Familiarízate con git</h3>
                                   <p><a href="https://devguide.python.org/gitbootcamp/">devguide.python.org/gitbootcamp</a></p>
-                                  <ol style="font-size:85%;" start="3"> 
+                                  <ol style="font-size:85%;" start="3">
                                     <li>Agrega el repositorio oficial como upstream</li>
                                   </ol>
                                   <pre>
@@ -154,7 +142,7 @@
                                   <h5>Introducción</h5>
                                   <h3>Familiarízate con git</h3>
                                   <p><a href="https://devguide.python.org/gitbootcamp/">devguide.python.org/gitbootcamp</a></p>
-                                  <ol style="font-size:85%;" start="3"> 
+                                  <ol style="font-size:85%;" start="3">
                                     <li>Asegúrate de que la configuración global de git incluye tus datos correctos</li>
                                   </ol>
                                   <pre>
@@ -168,8 +156,8 @@ git config --global user.email &lt;usuario&gt;@users.noreply.github.com
                                   <h5>Introducción</h5>
                                   <h3>Familiarízate con git</h3>
                                   <p><a href="https://devguide.python.org/gitbootcamp/">devguide.python.org/gitbootcamp</a></p>
-                                  <ol style="font-size:85%;" start="3"> 
-                                    <li>Crea y activa un <i>branch</i> a partir del <i>master branch</i></li>
+                                  <ol style="font-size:85%;" start="3">
+                                    <li>Crea un <em>branch</em> a partir del <em>master branch</em></li>
                                   </ol>
                                   <pre>
                                   <code>
@@ -299,7 +287,7 @@ CCOSS Python Contributor Workshop!
 				  <h2>Plan de vuelo para el taller</h2>
 
 				  <ol style="font-size:85%;" start="3">
-				    <li>Ámbitos de contribución:
+				    <li>Formas de contribución:
 				      <ul>
 					<li>Reporte de bugs
 					<li>Triaje: Revisa, comenta y comprueba los reportes
@@ -308,6 +296,134 @@ CCOSS Python Contributor Workshop!
 					<li>Conviértete en un core developer de Python
 				      </ul>
 				    </li>
+				  </ol>
+				</section>
+
+				<section>
+				  <h5>Formas de contribuir</h5>
+				  <h2>Buscando bugs</h2>
+
+				  <ul style="font-size: 85%;">
+				    <li>Encuentra alguno
+				    <li>Corre las pruebas de Python:
+				      <pre>
+					<code>
+./python -m test -j2 -rW
+
+./python -m test -h
+					</code>
+				      </pre>
+				    </li>
+				    <li>Si tienes "suerte", verifica el módulo que arroja el error y busca a ver si nadie lo ha reportado en bpo.
+				  </ul>
+				</section>
+
+				<section>
+				  <h5>Formas de contribuir</h5>
+				  <h2>Un poco de entomología</h2>
+
+				  <ul>
+				    <li>Si no tienes "suerte", siempre puedes checar la lista de bugs reportados en bpo:
+				      <ul>
+					<li><a href="https://bugs.python.org/issue?status=1&@sort=-activity&@columns=id%2Cactivity%2Ctitle%2Ccreator%2Cstatus&@dispname=Easy%20issues&@startwith=0&@group=priority&keywords=6&@action=search&@filter=&@pagesize=50">"Easy" issues</a>
+					<li><a href="https://bugs.python.org/issue?status=1&@sort=-activity&@columns=id%2Cactivity%2Ctitle%2Ccreator%2Cstatus&@dispname=Issues%20with%20patch&@startwith=0&@group=priority&keywords=2&@action=search&@filter=&@pagesize=50">Issues with patch</a>
+					<li><a href="https://bugs.python.org/issue?%40search_text=&ignore=file%3Acontent&title=&%40columns=title&id=&%40columns=id&stage=&creation=&creator=&activity=&%40columns=activity&%40sort=activity&actor=&nosy=&type=&components=&versions=&dependencies=&assignee=&keywords=22&priority=&status=1&%40columns=status&resolution=&nosy_count=&message_count=&%40group=&%40pagesize=50&%40startwith=0&%40sortdir=on&%40queryname=&%40old-queryname=&%40action=search">Newcomer friendly</a>
+				  </ul>
+				</section>
+
+				<section>
+				  <h5>Formas de contribuir</h5>
+				  <h2>¿En qué consiste el triaje (<em>triage</em>)?</h2>
+
+				  <h4>Revisión de <em>issues</em> y <em>pull requests (PR)</em></h4>
+				    <ul style="font-size:75%;">
+				      <li>Renombrar PRs
+				      <li>Revisar PRs
+				      <li>Ayudar a los contribuidores
+				      <li>Notificar a los <em>core developers</em>
+				      <li>Etiquetar apropiadamente: <em>DO-NOT-MERGE, expert-asyncio, invalid, needs backport to X.Y, OS-X, skip issue, skip news, sprint, stale, type-bugfix, type-documentation, type-enhancement, type-performance, type-security, type-tests</em>.
+				    </ul>
+				</section>
+
+				<section>
+				  <h5>Formas de contribuir</h5>
+				  <h2>¿Cómo ayudar a documentar Python?</h2>
+
+				  <h3>Para empezar</h3>
+
+				  <ul>
+				    <li>Python es famoso por su énfasis en la legibilidad y en la documentación del código: indentación, <em>docstrings</em>, tutorial, biblioteca estandar, guía del desarrollador.
+				    <li><a href="https://bugs.python.org/issue?%40search_text=&ignore=file%3Acontent&title=&%40columns=title&id=&%40columns=id&stage=&creation=&creator=&activity=&%40columns=activity&%40sort=activity&actor=&nosy=&type=&components=4&versions=&dependencies=&assignee=&keywords=6&priority=&status=1&%40columns=status&resolution=&nosy_count=&message_count=&%40group=&%40pagesize=100&%40startwith=0&%40sortdir=on&%40queryname=&%40old-queryname=&%40action=search">Issues relacionados con la documentación</a>
+				</section>
+
+				<section>
+				  <h5>Formas de contribuir</h5>
+				  <h2>Documentación de Python</h2>
+
+				  <ol>
+				    <li>Documentación para usuarios del lenguaje: tutorial, biblioteca estándar
+				      <ul>
+					<li>Incluida con el código fuente de CPython.
+				      </ul>
+				    </li>
+				    <li>Documentación para desarrolladores:
+				      <ul>
+					<li><a href="https://github.com/python/devguide">https://github.com/python/devguide</a>
+				      </ul>
+				  </ol>
+				</section>
+
+				<section>
+				  <h5>Formas de contribuir</h5>
+				  <h2>Traduciendo la documentación</h2>
+
+				  <h4>Según la PEP 545, cada traducción completa:</h4>
+
+				  <ul style="font-size: 70%;">
+				    <li>Tiene una etiqueta apropiada para cada idioma (ISO 639-1): <em>es, pt-br, fr, de, </em>...
+				    <li>Es distribuida bajo <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.es">CC0</a>
+				    <li>Se alberga en: https://github.com/python/python-docs-{LANGUAGE_TAG}
+				    <li>Debe incluir: tutorial/, library/stdtypes y library/functions
+				    <li>Está disponible en https://docs.python.org/{LANGUAGE_TAG}/{VERSION_TAG}/
+				  </ul>
+				</section>
+
+				<section data-background="#AA2222">
+				  <h5>Formas de contribuir</h5>
+				  <h2>Traduciendo la documentación</h2>
+
+				  <p>¡<a href="https://docs.python.org/es/3.7/">https://docs.python.org/es/3.7/</a> genera un error HTTP 404!</p>
+				</section>
+
+				<section data-background="#22AA22">
+				  <h5>Formas de contribuir</h5>
+				  <h2>Traducción al español</h2>
+
+				  <p><a href="https://github.com/raulcd/python-docs.es/">https://github.com/raulcd/python-docs.es/</a></p>
+				</section>
+
+				<section>
+				  <h5>Formas de contribuir</h5>
+				  <h2>Evangelizando con Python</h2>
+
+				  <ol style="font-size: 85%;">
+				    <li>Ayuda resolviendo las dudas de los principiantes
+				    <li>Comparte tu conocimiento en Meetups, Python Days, Pycons, etc.
+				    <li>No participes en flame wars sobre lenguajes
+				    <li>Enfócate en las fortalezas del lenguaje: consistencia, legibilidad, documentación, potencia, ...
+				  </ol>
+				</section>
+
+				<section>
+				  <h5>Formas de contribuir</h5>
+				  <h2>El camino del core developer</h2>
+
+				  <ol>
+				    <li>Desarrollador de Python/Usuario de CPython
+				    <li>Contribuidor
+				    <li>Triage
+				    <li>Core developer
+				    <li>Mentor
 				  </ol>
 				</section>
 
